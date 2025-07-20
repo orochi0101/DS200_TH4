@@ -17,7 +17,7 @@ log4j.Logger.getLogger("org").setLevel(log4j.Level.ERROR)
 ssc = StreamingContext(spark.sparkContext, 5)
 
 demo_path = "/data/processed/demo.csv"
-model_path = "/data/processed/model"
+model_path = "/data/model_randomforestregressor.pkl"
 output_path = "/data/streaming_results.csv"
 
 static_df = spark.read.option("header", "true").option("inferSchema", "true").csv(demo_path)
